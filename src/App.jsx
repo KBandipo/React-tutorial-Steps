@@ -12,6 +12,10 @@ function App() {
     alert("any");
   }
 
+  function handleNext() {
+    alert("next");
+  }
+
   return (
     <div className="steps">
       <div className="numbers">
@@ -31,7 +35,10 @@ function App() {
         >
           Previous
         </button>
-        <button style={{ backgroundColor: "#7950f2", color: "#fff" }}>
+        <button
+          style={{ backgroundColor: "#7950f2", color: "#fff" }}
+          onClick={handleNext}
+        >
           Next
         </button>
       </div>
