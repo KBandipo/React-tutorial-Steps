@@ -44,12 +44,12 @@ function App() {
           </p>
 
           <div className="buttons">
-            <button
-              style={{ backgroundColor: "#7950f2", color: "#fff" }}
+            <Button
+              bg="#7950f2"
+              textColor="#fff"
+              text="Previous"
               onClick={handlePrevious}
-            >
-              Previous
-            </button>
+            />
             <button
               style={{ backgroundColor: "#7950f2", color: "#fff" }}
               onClick={handleNext}
@@ -60,6 +60,14 @@ function App() {
         </div>
       )}
     </React.Fragment>
+  );
+}
+
+function Button({ bg, textColor, text, onClick }) {
+  return (
+    <button style={{ backgroundColor: bg, color: textColor }} onClick={onClick}>
+      {text}
+    </button>
   );
 }
 
