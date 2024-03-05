@@ -49,12 +49,14 @@ function App() {
               textColor="#fff"
               text="Previous"
               onClick={handlePrevious}
+              emoji="👈"
             />
             <Button
               bg="#7950f2"
               textColor="#fff"
               text="Next"
               onClick={handleNext}
+              emoji="👉"
             />
           </div>
         </div>
@@ -63,9 +65,10 @@ function App() {
   );
 }
 
-function Button({ bg, textColor, text, onClick }) {
+function Button({ bg, textColor, text, onClick, emoji }) {
   return (
     <button style={{ backgroundColor: bg, color: textColor }} onClick={onClick}>
+      <span>{emoji}</span>
       {text}
     </button>
   );
